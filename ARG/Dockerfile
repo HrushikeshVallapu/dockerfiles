@@ -3,5 +3,6 @@ FROM almalinux:${version:-9}
 ENV NAME="hrushikesh" \
     COMP="HME_SOLUTIONS"
 ARG ROLE="DevOps"
-RUN echo "name: ${NAME}, company: ${COMP}, designation: ${ROLE}"
+ENV version = ${version}
+RUN echo "name: ${NAME}, company: ${COMP}, designation: ${ROLE}, version: ${version}"
 CMD ["sleep", "1000"]
