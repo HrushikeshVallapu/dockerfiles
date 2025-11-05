@@ -1,4 +1,5 @@
-FROM almalinux:9
+ARG version
+FROM almalinux:${version:-9}
 ENV NAME="hrushikesh" \
     COMP="HME_SOLUTIONS"
 ARG ROLE="DevOps"
